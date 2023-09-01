@@ -41,7 +41,7 @@ if (history.scrollRestoration) {
     );
 }
 
-
+//페이지 애니메이션
 Pages.forEach((it, idx, arry) => {
     ScrollTrigger.create({
         trigger: it,
@@ -118,3 +118,23 @@ function setActive(link, idx) {
     link.classList.add("on");
 }
 
+
+var moveF = 30;
+var rotateF = 10;
+
+//움직이는 곳
+$(document).mousemove(function (e) {
+    var DocX = $('.stck').width();
+    var DocY = $('.stck').height();
+
+    var moveX = (e.pageX - DocX / 2) / (DocX / 2) * -moveF;
+    var moveY = (e.pageY - DocY / 2) / (DocY / 2) * -moveF;
+
+    var rotateY = (e.pageX / DocX * rotateF / 2) - rotateF;
+    var rotateX = -((e.pageY / DocY * rotateF / 2) - rotateF);
+
+    $('.popup')
+        .css('left', (moveX / 2) + 'px')
+        .css('top', (moveY / 2) + 'px')
+        .css('transform', 'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)');
+});
