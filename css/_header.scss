@@ -181,7 +181,7 @@
         .gnb {
             ul {
                 li {
-                    &:nth-child(1) {
+                    &:nth-child(2) {
                         a {
                             &::before {
                                 background: $c-p01;
@@ -193,7 +193,7 @@
                         }
                     }
 
-                    &:nth-child(2) {
+                    &:nth-child(3) {
                         a {
                             &::before {
                                 background: $c-p02;
@@ -206,7 +206,7 @@
                         }
                     }
 
-                    &:nth-child(3) {
+                    &:nth-child(4) {
                         a {
                             &::before {
                                 background: $c-p03;
@@ -219,7 +219,7 @@
                         }
                     }
 
-                    &:nth-child(4) {
+                    &:nth-child(5) {
                         a {
                             &::before {
                                 background: $c-p04;
@@ -232,7 +232,7 @@
                         }
                     }
 
-                    &:nth-child(5) {
+                    &:nth-child(6) {
                         a {
 
                             &::before {
@@ -246,7 +246,7 @@
                         }
                     }
 
-                    &:nth-child(6) {
+                    &:nth-child(7) {
                         a {
                             &::before {
                                 background: $c-p06;

@@ -72,8 +72,7 @@ Pages.forEach((it, idx, arry) => {
     up.addEventListener("click", (e) => {
         e.preventDefault();
         gsap.from(window, {
-            scrollTo: "main",
-            duration: 2,
+            scrollTo: "main"
         });
     })
     down.addEventListener("click", (e) => {
