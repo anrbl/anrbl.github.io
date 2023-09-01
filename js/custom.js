@@ -43,7 +43,7 @@ if (history.scrollRestoration) {
 
 //페이지 애니메이션
 Pages.forEach((it, idx, arry) => {
-    ScrollTrigger.create({
+    const pg = ScrollTrigger.create({
         trigger: it,
         start: () => it.offsetHeight < window.innerHeight ? "top top" : "bottom bottom",
         pin: true,
@@ -69,6 +69,26 @@ Pages.forEach((it, idx, arry) => {
         },
     });
 
+    up.addEventListener("click", (e) => {
+        e.preventDefault();
+        gsap.from(window, {
+            scrollTo: "main",
+            duration: 2,
+        });
+    })
+    down.addEventListener("click", (e) => {
+        e.preventDefault();
+        const por = "#port" + idx;
+        console.log(por)
+
+        gsap.to(window, {
+            scrollTo: {
+                y: por,
+                offsetY: 0
+            },
+            duration: 2,
+        });
+    })
 });
 
 ScrollTrigger.create({
@@ -127,14 +147,14 @@ $(document).mousemove(function (e) {
     var DocX = $('.stck').width();
     var DocY = $('.stck').height();
 
-    var moveX = (e.pageX - DocX / 2) / (DocX / 2) * -moveF;
-    var moveY = (e.pageY - DocY / 2) / (DocY / 2) * -moveF;
+    var moveX = (e.pageX - DocX) / (DocX) * -moveF;
+    var moveY = (e.pageY - DocY) / (DocY) * -moveF;
 
-    var rotateY = (e.pageX / DocX * rotateF / 2) - rotateF;
-    var rotateX = -((e.pageY / DocY * rotateF / 2) - rotateF);
+    var rotateY = (e.pageX / DocX * rotateF / 4) - rotateF;
+    var rotateX = -((e.pageY / DocY * rotateF / 4) - rotateF);
 
     $('.popup')
-        .css('left', (moveX / 2) + 'px')
-        .css('top', (moveY / 2) + 'px')
+        .css('left', moveX + 'px')
+        .css('top', (moveY) + 'px')
         .css('transform', 'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)');
 });

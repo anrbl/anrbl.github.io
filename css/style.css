@@ -391,7 +391,7 @@ p {
   box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#main_cover .cover {
+.main_cover .cover {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -399,7 +399,7 @@ p {
   height: 100%;
   padding: 0 120px;
 }
-#main_cover .cover h2 {
+.main_cover .cover h2 {
   text-align: right;
   font-size: 240px;
   line-height: 100px;
@@ -407,14 +407,14 @@ p {
   transform: rotate(-4deg);
   margin: 0 0 24px 0;
 }
-#main_cover .cover p {
+.main_cover .cover p {
   text-align: right;
 }
-#main_cover .cover p strong {
+.main_cover .cover p strong {
   font-weight: 700;
   margin: 0 0 16px 0;
 }
-#main_cover .cover::before {
+.main_cover .cover::before {
   content: "";
   position: absolute;
   right: 80px;
@@ -452,7 +452,7 @@ p {
   font-family: "Unbounded";
   margin: 0 0 16px 0;
   color: transparent;
-  background: #bbbb54;
+  background: #cfcf5a;
   background-clip: border-box;
   -webkit-background-clip: text;
 }
@@ -507,7 +507,7 @@ p {
   position: relative;
   width: 24px;
   height: 24px;
-  background: #bbbb54;
+  background: #cfcf5a;
 }
 .stck .content .case_l .port_desc .colors .color_chip li em {
   position: absolute;
@@ -589,7 +589,7 @@ p {
   display: grid;
   grid-template-columns: 400px 1fr;
   gap: 56px;
-  padding: 200px 24px;
+  padding: 150px 24px;
 }
 .case .title {
   margin: 0 0 48px 0;
@@ -638,6 +638,9 @@ p {
   font-size: 24px;
   font-weight: 700;
   margin: 0 0 8px 0;
+}
+.case ul li a span {
+  color: #999;
 }
 .case ul li::before {
   content: "";

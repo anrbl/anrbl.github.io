@@ -194,7 +194,7 @@
     display: grid;
     grid-template-columns: 400px 1fr;
     gap: 56px;
-    padding: 200px 24px;
+    padding: 150px 24px;
 
     .title {
         margin: 0 0 48px 0;
@@ -253,6 +253,10 @@
                         font-weight: 700;
                         margin: 0 0 8px 0;
                     }
+                }
+
+                span {
+                    color: $c-9;
                 }
             }
 
