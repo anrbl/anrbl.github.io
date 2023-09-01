@@ -1,0 +1,551 @@
+.stck {
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 400px;
+        align-items: start;
+        gap: 56px;
+        padding: 190px 24px;
+
+        .case_l {
+            order: 2;
+
+            .title {
+                text-align: right;
+                margin: 0 0 48px 0;
+
+                h2 {
+                    font-size: 46px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    font-family: 'Unbounded';
+                    margin: 0 0 16px 0;
+
+                    color: transparent;
+                    background: $c-main;
+                    background-clip: border-box;
+                    -webkit-background-clip: text;
+                }
+
+                span {
+                    font-size: 24px;
+                    font-weight: 100;
+                    line-height: 28px;
+                }
+            }
+
+            .port_desc {
+                padding: 24px;
+                border-radius: 8px;
+                background: $c-w;
+                margin: 0 0 16px 0;
+                border: 1px solid $c-line;
+
+                p {
+                    line-height: 22px;
+                    font-weight: 300;
+                    margin: 0 0 31px 0;
+                }
+
+
+                .tag {
+                    display: grid;
+                    grid-template-columns: 84px 1fr;
+                    gap: 16px;
+
+                    strong {
+                        display: block;
+                        width: 84px;
+                        height: 26px;
+                        text-align: center;
+                        border-radius: 24px;
+
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 26px;
+                        color: $c-6;
+                        background: $c-wb ;
+                        text-indent: -2px;
+                    }
+                }
+
+
+                .works {
+                    margin: 0 0 16px 0;
+                }
+
+                .tools {
+                    margin: 0 0 16px 0;
+                }
+
+                .colors {
+                    .color_chip {
+                        display: flex;
+                        gap: 10px;
+                        color: $c-6;
+                        font-size: 15px;
+
+                        li {
+                            position: relative;
+
+                            width: 24px;
+                            height: 24px;
+                            background: $c-main;
+
+                            em {
+                                position: absolute;
+                                bottom: -42px;
+                                left: 50%;
+                                transform: translate(-50%, 8px);
+
+                                font-size: 14px;
+                                white-space: nowrap;
+                                padding: 8px 16px;
+                                background: $c-w;
+                                border-radius: 8px;
+                                border: 1px solid $c-g;
+
+                                visibility: hidden;
+                                opacity: 0;
+                                transition: 0.5s;
+
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    top: -9px;
+                                    left: 50%;
+                                    transform: translate(-50%, 0);
+                                    width: 10px;
+                                    height: 8px;
+                                    background: $c-g;
+                                    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+                                }
+                            }
+
+                            &:hover {
+                                em {
+                                    transform: translate(-50%, 0);
+                                    visibility: visible;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .port_link {
+                display: flex;
+                justify-content: flex-end;
+                gap: 16px;
+
+                li {
+                    a {
+                        display: block;
+                        padding: 8px 24px;
+                        text-transform: uppercase;
+                        color: $c-w;
+                        border-radius: 4px;
+                        border: 1px solid $c-line;
+                    }
+                }
+            }
+        }
+
+        .case_r {
+            position: relative;
+            z-index: 1;
+
+            figure {
+                width: 100%;
+                height: 500px;
+                overflow: hidden;
+                border-radius: 12px;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                &.sc {
+                    img {
+                        height: 100%;
+                    }
+                }
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: -1;
+                transform: translate(-50%, -50%);
+                width: calc(100% + 16px);
+                height: calc(100% + 16px);
+                border-radius: 16px;
+                box-shadow: 1px 2px 15px rgba($color: $c-3, $alpha: 0.2);
+            }
+        }
+    }
+}
+
+.case {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 56px;
+    padding: 200px 24px;
+
+    .title {
+        margin: 0 0 48px 0;
+
+        h2 {
+            font-size: 56px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: 'Unbounded';
+            margin: 0 0 16px 0;
+
+            color: $c-3;
+        }
+
+        span {
+            font-size: 24px;
+            font-weight: 100;
+            line-height: 28px;
+        }
+    }
+
+    ul {
+        li {
+            position: relative;
+            margin: 0 0 40px 0;
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .desc {
+                    display: flex;
+                    align-items: center;
+                    gap: 32px;
+
+                    .num {
+                        font-size: 40px;
+                        font-weight: 900;
+                        font-family: 'Unbounded';
+
+                        width: 100px;
+                        height: 100px;
+                        line-height: 100px;
+                        text-align: center;
+                        background: $c-line;
+                        color: $c-6;
+                        border-radius: 50%;
+                    }
+                }
+
+                .txt {
+                    strong {
+                        display: block;
+                        font-size: 24px;
+                        font-weight: 700;
+                        margin: 0 0 8px 0;
+                    }
+                }
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -20px;
+                left: 0;
+                right: 0;
+                height: 2px;
+                width: 100%;
+                background: $c-line;
+
+            }
+        }
+    }
+}
+
+
+.main_port1 {
+    .content {
+        .case_l {
+            .title {
+                h2 {
+                    background: $c-p01;
+                    background-clip: border-box;
+                    -webkit-background-clip: text;
+                }
+            }
+
+            .port_desc {
+                .colors {
+                    .color_chip {
+                        li {
+                            &.c_m {
+                                background: $c-m01;
+                            }
+
+                            &.c_s {
+                                background: #3893ee;
+                            }
+
+                            &.c_p {
+                                background: #ffc000;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .port_link {
+                li {
+                    a {
+                        background: $c-m01;
+                    }
+                }
+            }
+        }
+
+        .case_r {
+            &::before {
+                background: $c-p01;
+            }
+        }
+    }
+}
+
+.main_port2 {
+    .content {
+        .case_l {
+            .title {
+                h2 {
+                    background: $c-p02;
+                    background-clip: border-box;
+                    -webkit-background-clip: text;
+                }
+            }
+
+            .port_desc {
+                .colors {
+                    .color_chip {
+                        li {
+                            &.c_m {
+                                background: $c-m02;
+                            }
+
+                            &.c_s {
+                                background: #7baffd;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .port_link {
+                li {
+                    a {
+                        background: $c-m02;
+                    }
+                }
+            }
+
+        }
+
+        .case_r {
+            &::before {
+                background: $c-p02;
+            }
+        }
+    }
+}
+
+.main_port3 {
+    .content {
+        .case_l {
+            .title {
+                h2 {
+                    background: $c-p03;
+                    background-clip: border-box;
+                    -webkit-background-clip: text;
+                }
+            }
+
+            .port_desc {
+                .colors {
+                    .color_chip {
+                        li {
+                            &.c_m {
+                                background: $c-m03;
+                            }
+
+                            &.c_p {
+                                background: #d3ba9e;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .port_link {
+                li {
+                    a {
+                        background: $c-m03;
+                    }
+                }
+            }
+        }
+
+        .case_r {
+            &::before {
+                background: $c-p03;
+            }
+        }
+    }
+}
+
+.main_port4 {
+    .content {
+        .case_l {
+            .title {
+                h2 {
+                    background: $c-p04;
+                    background-clip: border-box;
+                    -webkit-background-clip: text;
+                }
+            }
+
+            .port_desc {
+                .colors {
+                    .color_chip {
+                        li {
+                            &.c_m {
+                                background: $c-m04;
+                            }
+
+                            &.c_s {
+                                background: #ad4c0b
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            .port_link {
+                li {
+                    a {
+                        background: $c-m04;
+                    }
+                }
+            }
+        }
+
+        .case_r {
+            &::before {
+                background: $c-p04;
+            }
+        }
+    }
+}
+
+.main_port5 {
+    .content {
+        .case_l {
+            .title {
+                h2 {
+                    background: $c-p05;
+                    background-clip: border-box;
+                    -webkit-background-clip: text;
+                }
+            }
+
+            .port_desc {
+                .colors {
+                    .color_chip {
+                        li {
+                            &.c_m {
+                                background: $c-m05;
+                            }
+
+                            &.c_s {
+                                background: #8d1891;
+                            }
+
+                            &.c_p {
+                                background: #b80e0e;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .port_link {
+                li {
+                    a {
+                        background: $c-m05;
+                    }
+                }
+            }
+        }
+
+        .case_r {
+            &::before {
+                background: $c-p05;
+            }
+        }
+    }
+}
+
+.main_port6 {
+    .content {
+        .case_l {
+            .title {
+                h2 {
+                    background: $c-p06;
+                    background-clip: border-box;
+                    -webkit-background-clip: text;
+                }
+            }
+
+            .port_desc {
+                .colors {
+                    .color_chip {
+                        li {
+                            &.c_m {
+                                background: $c-m06;
+                            }
+
+                            &.c_s {
+                                background: #007fb2;
+                            }
+
+                            &.c_p {
+                                background: #6cb1cc;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .port_link {
+                li {
+                    a {
+                        background: $c-m06;
+                    }
+                }
+            }
+        }
+
+        .case_r {
+            &::before {
+                background: $c-p06;
+            }
+        }
+    }
+}

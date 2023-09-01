@@ -1,0 +1,56 @@
+.stck {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    margin: 0 auto 0 400px;
+    height: 100vh;
+    width: calc(100vw - 430px);
+    background: linear-gradient(rgba($color: $c-wb, $alpha: 0.15)0%, rgba($color: $c-wb, $alpha: 1) 130px, );
+    backdrop-filter: blur(5px);
+    box-shadow: -5px 0 10px rgba($color: $c-b, $alpha: 0.1);
+}
+
+#main_cover {
+    .cover {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100%;
+        padding: 0 120px;
+
+        h2 {
+            text-align: right;
+            font-size: 240px;
+            line-height: 100px;
+            font-family: 'Kolker Brush';
+            transform: rotate(-4deg);
+            margin: 0 0 24px 0;
+        }
+
+        p {
+            text-align: right;
+
+            strong {
+                font-weight: 700;
+                margin: 0 0 16px 0;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            right: 80px;
+            top: 50%;
+            z-index: -1;
+            transform: translate(0, -50%);
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(45deg, rgba($color: $c-6, $alpha: 0.1) 0%, rgba($color: $c-line, $alpha: 0.7)100%);
+            backdrop-filter: blur(10px);
+            box-shadow: 3px 3px 10px rgba($color: $c-9, $alpha: 0.2);
+            border: 3px solid rgba($color: $c-w, $alpha: 0.5);
+            border-radius: 8px;
+        }
+    }
+}

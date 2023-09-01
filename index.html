@@ -3,13 +3,447 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>230515</title>
+    <title>2023 임규리 Portforio</title>
+    <link rel="icon" href="./images/logo_color.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/style.css?ver=2.0">
+
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/custom.js?ver=1.0" defer></script>
 </head>
 
 <body>
-    <h1>임규리 010-****-****</h1>
+    <header class="header" id="header">
+        <div class="header_top">
+            <div class="icon">
+                <a href="/">
+                    <img src="./images/logo.png" alt="임규리 포토폴리오">
+                </a>
+            </div>
+            <div class="arrow">
+                <div class="up">
+                    <span class="material-symbols-outlined">
+                        keyboard_arrow_up
+                    </span>
+                </div>
+                <div class="down">
+                    <span class="material-symbols-outlined">
+                        keyboard_arrow_down
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="head_wrap">
+            <h1>
+                <a href="/">
+                    <span>2023</span>
+                    <strong class="bold">Im-Gyuri Portforio</strong>
+                </a>
+            </h1>
+            <nav class="gnb">
+                <h2 class="blind">포트폴리오 섹션 네비게이션</h2>
+                <ul>
+                    <!-- <li><a href="#main_cover">00</a></li> -->
+                    <li><a href="#port1">01</a></li>
+                    <li><a href="#port2">02</a></li>
+                    <li><a href="#port3">03</a></li>
+                    <li><a href="#port4">04</a></li>
+                    <li><a href="#port5">05</a></li>
+                    <li><a href="#port6">06</a></li>
+                    <li><a href="#training">Training</a></li>
+                    <li><a href="#footer">contact</a></li>
+                </ul>
+            </nav>
+            <div class="head_pagination">
+                <div class="pagination">
+                    <div class="page_num">
+                        <div class="num">
+                            0<strong class="n">0</strong>
+                        </div>
+                        <div class="txt">
+                            <span>INTRO</span>
+                            <strong class="bold">BOX ─ LINE </strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main" id="main">
+        <section class="main_cover stck" id="main_cover">
+            <div class="inner cover">
+                <h2>Box, Line,<br />...</h2>
+                <p><strong class="bold">점을 이어 선, 선을 이어 면으로.</strong>누구나 알아볼 수 있는 디자인,<br />누구나 이해할 수 있는 홈페이지를 만들겠습니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- 01 병원/인천세종병원 -->
+        <section class="main_port1 stck" id="port1">
+            <div class="inner content">
+                <div class="case_l">
+                    <div class="title">
+                        <h2>Incheon Sejong Hospital</h2>
+                        <span>인천 세종 병원</span>
+                    </div>
+                    <div class="port_desc">
+                        <p>사이트에서 필요한 정보를 손쉽게 확인이 가능하도록 전체적인 간격을 좁게 설정하여 작업하였습니다. 또한 카카오맵의 API를 사용하여 지도를 이용할 수 있도록 하였으며,
+                            모바일에서도 확인이 가능하도록 반응형으로 제작됐습니다.</p>
+                        <div class="works tag">
+                            <strong>작업</strong>
+                            <span>개인 작업, 모바일 반응형 (768px)</span>
+                        </div>
+                        <div class="tools tag">
+                            <strong>사용 툴</strong>
+                            <span>HTML, CSS, jQuery, javaScript, slick slide, Kakao map Developer</span>
+                        </div>
+                        <div class="colors tag">
+                            <strong>색상</strong>
+                            <ul class="color_chip">
+                                <li class="c_m"><em>Main : #00478f</em></li>
+                                <li class="c_s"><em>Sub : #3893ee</em></li>
+                                <li class="c_p"><em>Point : #ffc000</em></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="port_link">
+                        <li><a href="https://anrbl.github.io/incheonsejong_hospital/">Website</a></li>
+                        <li><a href="https://www.figma.com/file/4NcZ8N5B90FadMNj5U8l9A/%EC%9D%B8%EC%B2%9C%EC%84%B8%EC%A2%85%EB%B3%91%EC%9B%90?type=design&node-id=78%3A851&mode=design&t=bGmsypOFZgU1UScE-1"
+                                target="_blank">
+                                Figma
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="case_r">
+                    <figure>
+                        <img src="./images/port_sejong.png" alt="인천 세종 병원">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 웨딩 부케/blooms -->
+        <section class="main_port2 stck" id="port2">
+            <div class="inner content">
+                <div class="case_l">
+                    <div class="title">
+                        <h2>Something Borrowed Blooms</h2>
+                        <span>Blooms</span>
+                    </div>
+                    <div class="port_desc">
+                        <p>쇼핑몰의 성격과 주 고객층을 고려하여 화려한 디자인을 중점으로 퍼블리싱 작업을 진행했습니다. 풀페이지에 맞게 각 섹션마다 다른 레이아웃 디자인을 가지도록 작업했으며,
+                            모바일에서 열람이 가능한 반응형으로 제작됐습니다.</p>
+                        <div class="works tag">
+                            <strong>작업</strong>
+                            <span>개인 작업, 모바일 반응형 (768px)</span>
+                        </div>
+                        <div class="tools tag">
+                            <strong>사용 툴</strong>
+                            <span>HTML, Scss, jQuery, slick slide, FullPage</span>
+                        </div>
+                        <div class="colors tag">
+                            <strong>색상</strong>
+                            <ul class="color_chip">
+                                <li class="c_m"><em>Main : #f8c0b2</em></li>
+                                <li class="c_s"><em>Sub : #7baffd</em></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="port_link">
+                        <li><a href="https://anrbl.github.io/blooms" target="_blank">Website</a></li>
+                        <li><a href="https://www.figma.com/file/nRxLVMRDyfDswmKHOIS4CX/Bloom?type=design&node-id=16%3A667&mode=design&t=WcnVhw3HUP0Mate5-1"
+                                target="_blank">Figma</a></li>
+                    </ul>
+                </div>
+
+                <div class="case_r">
+                    <figure>
+                        <img src="./images/port_bloom.png" alt="blooms">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 시계/브레게 -->
+        <section class="main_port3 stck" id="port3">
+            <div class="inner content">
+                <div class="case_l">
+                    <div class="title">
+                        <h2>Breguet</h2>
+                        <span>브레게</span>
+                    </div>
+                    <div class="port_desc">
+                        <p>원본 사이트의 형태를 최대한 유지하되 가독성을 고려하여 작업을 진행하였습니다. 모바일에서도 확인이 가능한 반응형으로 제작되었습니다.</p>
+                        <div class="works tag">
+                            <strong>작업</strong>
+                            <span>개인 작업, 모바일 반응형 (768px)</span>
+                        </div>
+                        <div class="tools tag">
+                            <strong>사용 툴</strong>
+                            <span>HTML, CSS, jQuery, slick slide</span>
+                        </div>
+                        <div class="colors tag">
+                            <strong>색상</strong>
+                            <ul class="color_chip">
+                                <li class="c_m"><em>Main : #2a4983</em></li>
+                                <li class="c_p"><em>Point : #d3ba9e</em></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="port_link">
+                        <li><a href="https://anrbl.github.io/breguet" target="_blank">Website</a></li>
+                        <li><a href="https://www.figma.com/file/eTU8qvs64orGl0KwPK7KYp/breguet?type=design&node-id=0%3A1&mode=design&t=rjxQ864uoWUcS1G7-1"
+                                target="_blank">Style Guide</a></li>
+                    </ul>
+                </div>
+
+                <div class="case_r">
+                    <figure class="sc">
+                        <img src="./images/port_breguet.png" alt="브레게">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 모터사이클/할리 데이비슨 -->
+        <section class="main_port4 stck" id="port4">
+            <div class="inner content">
+                <div class="case_l">
+                    <div class="title">
+                        <h2>Harley Davidson</h2>
+                        <span>할리 데이비슨</span>
+                    </div>
+                    <div class="port_desc">
+                        <p>도로를 거칠게 주행하는 모터사이클의 특성을 살리고자 굵기가 굵은 폰트들을 사용하였습니다. 풀페이지의 특성을 살리기 위해
+                            1440px을 그리드 라인으로 잡았으며, 모바일에서도 확인이 가능한 반응형으로 제작되었습니다.</p>
+                        <div class="works tag">
+                            <strong>작업</strong>
+                            <span>개인 작업, 모바일 반응형 (768px)</span>
+                        </div>
+                        <div class="tools tag">
+                            <strong>사용 툴</strong>
+                            <span>Html, Scss, jQuery, swiper slide, FullPage</span>
+                        </div>
+                        <div class="colors tag">
+                            <strong>색상</strong>
+                            <ul class="color_chip">
+                                <li class="c_m"><em>Main : #fa6600</em></li>
+                                <li class="c_s"><em>Sub : #ad4c0b</em></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="port_link">
+                        <li><a href="https://anrbl.github.io/harley_davidson" target="_blank">Website</a></li>
+                        <li><a href="https://www.figma.com/file/cboe7rXHIa149ddgIDHJVe/harley-davidson?type=design&node-id=0%3A1&mode=design&t=qqZlSVLtDy43M5hV-1"
+                                target="_blank">Figma</a></li>
+                    </ul>
+                </div>
+
+                <div class="case_r">
+                    <figure>
+                        <img src="./images/port_harley.png" alt="할리 데이비슨">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- 05 협회/울산태권도협회 -->
+        <section class="main_port5 stck" id="port5">
+            <div class="inner content">
+                <div class="case_l">
+                    <div class="title">
+                        <h2>Ulsan Taekwondo Association</h2>
+                        <span>울산광역시 태권도협회</span>
+                    </div>
+                    <div class="port_desc">
+                        <p>2000년대에 제작된 사이트를 전체적으로 리뉴얼하여 작업하였습니다. 심플한 레이아웃을 사용하였으나 이전 사이트보다 넓은 느낌을 주기 위해 1440px를 기준으로 작업,
+                            사이트를 재구성하였습니다. 모바일에서도 확인이 가능하도록 반응형으로 제작됐습니다.</p>
+                        <div class="works tag">
+                            <strong>작업</strong>
+                            <span>개인 작업, 모바일 반응형 (768px)</span>
+                        </div>
+                        <div class="tools tag">
+                            <strong>사용 툴</strong>
+                            <span>Html, Scss, jQuery, slick slide</span>
+                        </div>
+                        <div class="colors tag">
+                            <strong>색상</strong>
+                            <ul class="color_chip">
+                                <li class="c_m"><em>Main : #3e0f7c</em></li>
+                                <li class="c_s"><em>Sub : #8d1891</em></li>
+                                <li class="c_p"><em>Point : #b80e0e</em></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="port_link">
+                        <li><a href="https://anrbl.github.io/ulsan_taekwondo/" target="_blank">Website</a></li>
+                        <li><a href="http://ulsantkd.org/" target="_blank">Original</a></li>
+                    </ul>
+                </div>
+
+                <div class="case_r">
+                    <figure class="sc">
+                        <img src="./images/port_ulsan.png" alt="울산광역시 태권도협회">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06 주방용품/키친아트 -->
+        <section class="main_port6 stck" id="port6">
+            <div class="inner content">
+                <div class="case_l">
+                    <div class="title">
+                        <h2>Kitchen Art</h2>
+                        <span>키친 아트</span>
+                    </div>
+                    <div class="port_desc">
+                        <p>기본이 되는 심플한 레이아웃 구조들로 사이트를 단단해 보일 수 있게끔 재배치하여 작업하였습니다. 모바일에서도 열람이 가능하도록 반응형으로 제작되었습니다.</p>
+                        <div class="works tag">
+                            <strong>작업</strong>
+                            <span>개인 작업, 모바일 반응형 (768px)</span>
+                        </div>
+                        <div class="tools tag">
+                            <strong>사용 툴</strong>
+                            <span>Html, Scss, jQuery, slick slide</span>
+                        </div>
+                        <div class="colors tag">
+                            <strong>색상</strong>
+                            <ul class="color_chip">
+                                <li class="c_m"><em>Main : #ed1b23</em></li>
+                                <li class="c_s"><em>Sub1 : #007fb2</em></li>
+                                <li class="c_p"><em>Sub2 : #6cb1cc</em></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="port_link">
+                        <li><a href="https://anrbl.github.io/kitchen-art/" target="_blank">Website</a></li>
+                    </ul>
+                </div>
+
+                <div class="case_r">
+                    <figure class="sc">
+                        <img src="./images/port_kitchenart.png" alt="키친아트">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- 트레이닝 모음 -->
+        <section class="main_training stck" id="training">
+            <div class="inner case">
+                <div class="title">
+                    <h2>Training</h2>
+                    <p>개인 실습 목록</p>
+                </div>
+                <ul>
+                    <li>
+                        <a href="http://anrbl803.dothome.co.kr">
+                            <div class="desc">
+                                <div class="num">01</div>
+                                <div class="txt">
+                                    <strong>독도전시관</strong>
+                                    <p>그누보드 활용 | 메인 페이지 레이아웃을 따라 만드는 클론 코딩 실습, 호스팅한 사이트에 적용시키기</p>
+                                </div>
+                            </div>
+                            <span>MORE</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://rbflkkangcha1.dothome.co.kr" target="_blank">
+                            <div class="desc">
+                                <div class="num">02</div>
+                                <div class="txt">
+                                    <strong>부산 청소업체, 깔끔이 청소</strong>
+                                    <p>그누보드 활용 | php를 활용하여 카테고리 별로 사이트 연동한 클론 코딩 실습</p>
+                                </div>
+                            </div>
+                            <span>MORE</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://anrbl.github.io/responsive_web_outback" target="_blank">
+                            <div class="desc">
+                                <div class="num">03</div>
+                                <div class="txt">
+                                    <strong>아웃백 스테이크 하우스</strong>
+                                    <p>클론 코딩을 통한 사이트 레이아웃에 대한 이해 실습</p>
+                                </div>
+                            </div>
+                            <span>MORE</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://anrbl.github.io/casia" target="_blank">
+                            <div class="desc">
+                                <div class="num">04</div>
+                                <div class="txt">
+                                    <strong>카시아 속초</strong>
+                                    <p>사이트 레이아웃을 리뉴얼하여 접근성을 높인 코딩 실습</p>
+                                </div>
+                            </div>
+                            <span>MORE</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://anrbl.github.io/project10-1" target="_blank">
+                            <div class="desc">
+                                <div class="num">05</div>
+                                <div class="txt">
+                                    <strong>힐스테이트 모종 블루랑체</strong>
+                                    <p>개인작업 | 서비스 경험 디자인 관찰 및 조사 </p>
+                                </div>
+                            </div>
+                            <span>MORE</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer stck" id="footer">
+        <div class="inner">
+            <strong class="tit">About Us</strong>
+
+            <div class="ft">
+                <div class="fl">
+                    <h3>Im Gyu-ri</h3>
+                </div>
+                <div class="fc">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><strong>Tel&nbsp;</strong> <span>010. 5035. 9347</span></li>
+                        <li><strong>Mail&nbsp;</strong> <span>anrbl93@gmail.com</span></li>
+                        <li><strong>Github&nbsp;</strong> <span><a href="github.com/anrbl"
+                                    target="_blank">github.com/anrbl</a></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fr">
+                    <h3>Education</h3>
+                    <ul>
+                        <li>그린컴퓨터아카데미, [디지털디자인] UI/UX 반응형 웹디자인&amp;웹퍼블리셔(디자인&amp;코딩)양성 23-4</li>
+                        <li>그린컴퓨터아카데미, 웹퍼블리셔(웹표준, HTML, CSS, 반응형웹디자인)A,B (60H)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="fb">
+                <p><span>&copy; 2023 Im Gyuri All right Reversed.</span> 해당 포트폴리오는 비상업적인 용도로 제작되었습니다.</p>
+            </div>
+
+        </div>
+    </footer>
 </body>
 
 </html>

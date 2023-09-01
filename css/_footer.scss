@@ -1,0 +1,105 @@
+.footer {
+    background: $c-2;
+
+
+    .inner {
+        padding: 210px 32px;
+
+        .tit {
+            display: block;
+            font-size: 80px;
+            font-family: 'Kolker Brush';
+            color: $c-9;
+            text-align: center;
+            margin: 0 0 120px 0;
+
+        }
+
+        .ft {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin: 0 0 120px 0;
+
+            h3 {
+                font-size: 40px;
+                font-weight: 700;
+                color: $c-wb;
+                font-family: 'Unbounded';
+                text-indent: -2px;
+                margin: 0 0 32px 0;
+            }
+
+            p {
+                color: $c-9;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                li {
+                    position: relative;
+                    color: $c-9;
+                    padding: 0 0 0 11px;
+                    line-height: 24px;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translate(0, -50%);
+                        width: 3px;
+                        height: 3px;
+                        border-radius: 50%;
+                        background: $c-6;
+
+                    }
+
+                    strong {
+                        display: inline-block;
+                        font-weight: 700;
+                        color: $c-g;
+                    }
+
+                    span {
+                        display: inline-block;
+                    }
+                }
+            }
+
+            &>* {
+                position: relative;
+
+                &:not(:first-child) {
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 4px;
+                        left: -40px;
+                        width: 1px;
+                        height: 180px;
+                        background: $c-6;
+                        opacity: 50%;
+                    }
+                }
+            }
+        }
+
+        .fb {
+
+            p {
+                color: $c-9;
+                font-size: 14px;
+                font-weight: 700;
+                text-align: center;
+
+                span {
+                    color: $c-6;
+                }
+            }
+        }
+    }
+}
