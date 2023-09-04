@@ -930,7 +930,7 @@ p {
   background: #222;
 }
 .footer .inner {
-  padding: 210px 32px;
+  padding: 200px 32px 160px 32px;
 }
 .footer .inner .tit {
   display: block;

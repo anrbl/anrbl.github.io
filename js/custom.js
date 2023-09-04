@@ -90,16 +90,16 @@ Pages.forEach((it, idx, arry) => {
     })
 });
 
-ScrollTrigger.create({
-    snap: {
-        snapTo: (progress, self) => {
-            let pageStart = tops.map(st => st.start),
-                snapScroll = gsap.utils.snap(pageStart, self.scroll());
-            return gsap.utils.normalize(0, ScrollTrigger.maxScroll(window), snapScroll);
-        },
-        duration: 1
-    }
-});
+// ScrollTrigger.create({
+//     snap: {
+//         snapTo: (progress, self) => {
+//             let pageStart = tops.map(st => st.start),
+//                 snapScroll = gsap.utils.snap(pageStart, self.scroll());
+//             return gsap.utils.normalize(0, ScrollTrigger.maxScroll(window), snapScroll);
+//         },
+//         duration: 1
+//     }
+// });
 
 //네비게이션
 Nav.forEach((link, idx) => {
