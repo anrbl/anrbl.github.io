@@ -190,6 +190,7 @@
     }
 }
 
+
 .case {
     display: grid;
     grid-template-columns: 400px 1fr;
@@ -275,6 +276,97 @@
     }
 }
 
+@media (max-width:1200px) {
+    .stck {
+        .content {
+            grid-template-columns: 1fr;
+            gap: 48px;
+            padding: 100px 40px;
+
+            .case_l {
+                .title {
+                    text-align: right;
+                    margin: 0 0 32px 0;
+
+                    h2 {
+                        font-size: 40px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        font-family: 'Unbounded';
+                        margin: 0 0 8px 0;
+                    }
+                }
+            }
+
+            .case_r {
+                figure {
+                    height: 300px;
+                }
+
+                &::before {
+                    width: calc(100% + 10px);
+                    height: calc(100% + 10px);
+                }
+            }
+        }
+    }
+
+    .case {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 100px 40px;
+
+        .title {
+            margin: 0 0 32px 0;
+
+            h2 {
+                font-size: 56px;
+                margin: 0 0 8px 0;
+            }
+        }
+
+        ul {
+            li {
+                position: relative;
+                margin: 0 0 32px 0;
+
+                a {
+                    .desc {
+                        .num {
+                            font-size: 32px;
+                            width: 90px;
+                            height: 90px;
+                            line-height: 90px;
+                        }
+                    }
+                }
+
+                &::before {
+                    bottom: -16px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .stck {
+        .content {
+            grid-template-columns: 1fr;
+            gap: 32px;
+            padding: 140px 24px;
+        }
+    }
+
+    .case {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 140px 24px;
+    }
+}
+
+
+//섹션별 색상 
 
 .main_port1 {
     .content {

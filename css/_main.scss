@@ -4,8 +4,8 @@
     z-index: 30;
     margin: 0 auto 0 400px;
     height: 100vh;
-    width: calc(100vw - 430px);
-    background: linear-gradient(rgba($color: $c-wb, $alpha: 0.15)0%, rgba($color: $c-wb, $alpha: 1) 130px, );
+    width: calc(100vw - 418px);
+    background: linear-gradient(rgba($color: $c-wb, $alpha: 0.15)0%, rgba($color: $c-wb, $alpha: 1) 130px);
     backdrop-filter: blur(5px);
     box-shadow: -5px 0 10px rgba($color: $c-b, $alpha: 0.1);
 }
@@ -54,5 +54,29 @@
         }
 
 
+    }
+}
+
+
+
+
+@media (max-width:1200px) {
+    .stck {
+        position: sticky;
+        margin: 0 auto 0 360px;
+        height: 100vh;
+        width: calc(100vw - 378px);
+
+        background: linear-gradient(rgba($color: $c-wb, $alpha: 0.15)0%, rgba($color: $c-wb, $alpha: 1) 90px);
+    }
+}
+
+@media (max-width:768px) {
+    .stck {
+        position: static;
+        margin: 0 auto;
+        width: auto;
+
+        background: $c-wb;
     }
 }

@@ -27,6 +27,12 @@ button {
     padding: 0 24px;
 }
 
+@media (max-width:1200px) {
+    .inner {
+        max-width: $max-1200;
+        margin: 0 auto;
+    }
+}
 
 
 span {
