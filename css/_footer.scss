@@ -1,7 +1,6 @@
 .footer {
     background: $c-2;
 
-
     .inner {
         padding: 200px 32px 160px 32px;
 
@@ -151,6 +150,34 @@
     .footer {
         .inner {
             padding: 140px 24px;
+        }
+    }
+}
+
+@media (max-width:650px) {
+    .footer {
+        .inner {
+            padding: 170px 24px;
+
+            .tit {
+                display: none;
+            }
+
+            .ft {
+                h3 {
+                    font-size: 28px;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+
+                ul {
+                    li {
+                        font-size: 14px;
+                    }
+                }
+            }
         }
     }
 }

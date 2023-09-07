@@ -190,182 +190,6 @@
     }
 }
 
-
-.case {
-    display: grid;
-    grid-template-columns: 400px 1fr;
-    gap: 56px;
-    padding: 150px 24px;
-
-    .title {
-        margin: 0 0 48px 0;
-
-        h2 {
-            font-size: 56px;
-            font-weight: 700;
-            text-transform: uppercase;
-            font-family: 'Unbounded';
-            margin: 0 0 16px 0;
-
-            color: $c-3;
-        }
-
-        span {
-            font-size: 24px;
-            font-weight: 100;
-            line-height: 28px;
-        }
-    }
-
-    ul {
-        li {
-            position: relative;
-            margin: 0 0 40px 0;
-
-            a {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-
-                .desc {
-                    display: flex;
-                    align-items: center;
-                    gap: 32px;
-
-                    .num {
-                        font-size: 40px;
-                        font-weight: 900;
-                        font-family: 'Unbounded';
-
-                        width: 100px;
-                        height: 100px;
-                        line-height: 100px;
-                        text-align: center;
-                        background: $c-line;
-                        color: $c-6;
-                        border-radius: 50%;
-                    }
-                }
-
-                .txt {
-                    strong {
-                        display: block;
-                        font-size: 24px;
-                        font-weight: 700;
-                        margin: 0 0 8px 0;
-                    }
-                }
-
-                span {
-                    color: $c-9;
-                }
-            }
-
-            &::before {
-                content: "";
-                position: absolute;
-                bottom: -20px;
-                left: 0;
-                right: 0;
-                height: 2px;
-                width: 100%;
-                background: $c-line;
-
-            }
-        }
-    }
-}
-
-@media (max-width:1200px) {
-    .stck {
-        .content {
-            grid-template-columns: 1fr;
-            gap: 48px;
-            padding: 100px 40px;
-
-            .case_l {
-                .title {
-                    text-align: right;
-                    margin: 0 0 32px 0;
-
-                    h2 {
-                        font-size: 40px;
-                        font-weight: 700;
-                        text-transform: uppercase;
-                        font-family: 'Unbounded';
-                        margin: 0 0 8px 0;
-                    }
-                }
-            }
-
-            .case_r {
-                figure {
-                    height: 300px;
-                }
-
-                &::before {
-                    width: calc(100% + 10px);
-                    height: calc(100% + 10px);
-                }
-            }
-        }
-    }
-
-    .case {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 100px 40px;
-
-        .title {
-            margin: 0 0 32px 0;
-
-            h2 {
-                font-size: 56px;
-                margin: 0 0 8px 0;
-            }
-        }
-
-        ul {
-            li {
-                position: relative;
-                margin: 0 0 32px 0;
-
-                a {
-                    .desc {
-                        .num {
-                            font-size: 32px;
-                            width: 90px;
-                            height: 90px;
-                            line-height: 90px;
-                        }
-                    }
-                }
-
-                &::before {
-                    bottom: -16px;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width:768px) {
-    .stck {
-        .content {
-            grid-template-columns: 1fr;
-            gap: 32px;
-            padding: 140px 24px;
-        }
-    }
-
-    .case {
-        grid-template-columns: 1fr;
-        gap: 32px;
-        padding: 140px 24px;
-    }
-}
-
-
 //섹션별 색상 
 
 .main_port1 {
@@ -641,6 +465,295 @@
         .case_r {
             &::before {
                 background: $c-p06;
+            }
+        }
+    }
+}
+
+.case {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 56px;
+    padding: 150px 24px;
+
+    .title {
+        margin: 0 0 48px 0;
+
+        h2 {
+            font-size: 56px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: 'Unbounded';
+            margin: 0 0 16px 0;
+
+            color: $c-3;
+        }
+
+        span {
+            font-size: 24px;
+            font-weight: 100;
+            line-height: 28px;
+        }
+    }
+
+    ul {
+        li {
+            position: relative;
+            margin: 0 0 40px 0;
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .desc {
+                    display: flex;
+                    align-items: center;
+                    gap: 32px;
+
+                    .num {
+                        font-size: 40px;
+                        font-weight: 900;
+                        font-family: 'Unbounded';
+
+                        width: 100px;
+                        height: 100px;
+                        line-height: 100px;
+                        text-align: center;
+                        background: $c-line;
+                        color: $c-6;
+                        border-radius: 50%;
+                    }
+                }
+
+                .txt {
+                    strong {
+                        display: block;
+                        font-size: 24px;
+                        font-weight: 700;
+                        margin: 0 0 8px 0;
+                    }
+                }
+
+                span {
+                    color: $c-9;
+                }
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -20px;
+                left: 0;
+                right: 0;
+                height: 2px;
+                width: 100%;
+                background: $c-line;
+
+            }
+        }
+    }
+}
+
+//--------------------------------------------------------
+
+@media (max-width:1200px) {
+    .stck {
+        .content {
+            grid-template-columns: 1fr;
+            gap: 48px;
+            padding: 100px 40px;
+
+            .case_l {
+                .title {
+                    text-align: right;
+                    margin: 0 0 32px 0;
+
+                    h2 {
+                        font-size: 40px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        font-family: 'Unbounded';
+                        margin: 0 0 8px 0;
+                    }
+                }
+            }
+
+            .case_r {
+                figure {
+                    height: 300px;
+                }
+
+                &::before {
+                    width: calc(100% + 10px);
+                    height: calc(100% + 10px);
+                }
+            }
+        }
+    }
+
+    .case {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 100px 40px;
+
+        .title {
+            margin: 0 0 32px 0;
+
+            h2 {
+                font-size: 56px;
+                margin: 0 0 8px 0;
+            }
+        }
+
+        ul {
+            li {
+                position: relative;
+                margin: 0 0 32px 0;
+
+                a {
+                    .desc {
+                        .num {
+                            font-size: 32px;
+                            width: 90px;
+                            height: 90px;
+                            line-height: 90px;
+                        }
+                    }
+                }
+
+                &::before {
+                    bottom: -16px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .stck {
+        .content {
+            grid-template-columns: 1fr;
+            gap: 32px;
+            padding: 140px 24px;
+        }
+    }
+
+    .case {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 140px 24px;
+    }
+}
+
+@media (max-width:650px) {
+    .stck {
+        .content {
+            padding: 130px 24px 50px 24px;
+
+            .case_l {
+                .title {
+                    margin: 0 0 32px 0;
+
+                    h2 {
+                        font-size: 32px;
+                        margin: 0 0 8px 0;
+                        width: 100%;
+                    }
+
+                    span {
+                        font-size: 18px;
+                    }
+                }
+
+                .port_desc {
+                    p {
+                        font-size: 14px;
+                        line-height: 20px;
+                        margin: 0 0 16px 0;
+                    }
+
+                    .tag {
+                        grid-template-columns: 64px 1fr;
+                        gap: 8px;
+
+                        strong {
+                            width: 64px;
+                        }
+
+                        span {
+                            font-size: 14px;
+                        }
+                    }
+
+                    .colors {
+                        display: none;
+                    }
+                }
+            }
+
+            .case_r {
+                figure {
+                    height: 120px;
+                }
+            }
+        }
+    }
+
+    .case {
+        padding: 130px 24px;
+
+        .title {
+            margin: 0 0 24px 0;
+
+            h2 {
+                font-size: 32px;
+                margin: 0 0 8px 0;
+            }
+
+            span {
+                font-size: 18px;
+            }
+        }
+
+        ul {
+            li {
+                a {
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 10px;
+
+                    .desc {
+                        align-items: flex-start;
+
+                        .num {
+                            font-size: 24px;
+                            width: auto;
+                            height: auto;
+                            line-height: 1;
+                            color: $c-9;
+                            background: none;
+                        }
+                    }
+
+                    .txt {
+                        strong {
+                            font-size: 20px;
+                            margin: 0 0 12px 0;
+                        }
+
+                        p {
+                            font-size: 14px;
+                            line-height: 18px;
+                            color: $c-9;
+                        }
+
+                    }
+
+                    span {
+                        display: none;
+                    }
+                }
             }
         }
     }

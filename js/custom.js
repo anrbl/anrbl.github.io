@@ -5,8 +5,9 @@ const tops = Pages.map(Page => ScrollTrigger.create({ trigger: Page, start: "top
 
 const up = document.querySelector('.arrow .up');
 const down = document.querySelector('.arrow .down');
-let Nav = gsap.utils.toArray('.gnb a');
-let Nav1 = document.querySelectorAll('.gnb li');
+const Nav = gsap.utils.toArray('.gnb a');
+const PT = document.querySelector('.gnb .MT')
+const Nav1 = document.querySelectorAll('.gnb li');
 const NUM = document.querySelector('.n')
 const PG_TEXT = document.querySelector('.page_num .txt span')
 const PG_TITLE = document.querySelector('.page_num .txt .bold')
@@ -90,25 +91,17 @@ Pages.forEach((it, idx, arry) => {
     })
 });
 
-// ScrollTrigger.create({
-//     snap: {
-//         snapTo: (progress, self) => {
-//             let pageStart = tops.map(st => st.start),
-//                 snapScroll = gsap.utils.snap(pageStart, self.scroll());
-//             return gsap.utils.normalize(0, ScrollTrigger.maxScroll(window), snapScroll);
-//         },
-//         duration: 1
-//     }
-// });
+
 
 //네비게이션
 Nav.forEach((link, idx) => {
-    let elem = document.querySelector(link.getAttribute("href")),
+    // const TG = e.target.hash;
+    const elem = document.querySelector(link.getAttribute("href"));
 
-        linkST = ScrollTrigger.create({
-            trigger: elem,
-            start: "top top"
-        });
+    const linkST = ScrollTrigger.create({
+        trigger: elem,
+        start: "top top"
+    });
 
     ScrollTrigger.create({
         trigger: elem,
@@ -128,6 +121,7 @@ Nav.forEach((link, idx) => {
             overwrite: "auto",
         });
     });
+
 });
 function setActive(link, idx) {
     // 모든 것에서 on을 떼어버림
@@ -137,9 +131,14 @@ function setActive(link, idx) {
     link.classList.add("on");
 }
 
+PT.addEventListener('click', e => {
+    e.preventDefault();
+    gsap.to(window, {
+        scrollTo: -100,
+        duration: 1,
+    });
+});
 
-var moveF = 30;
-var rotateF = 10;
 
 //움직이는 곳
 $(document).mousemove(function (e) {
@@ -156,4 +155,22 @@ $(document).mousemove(function (e) {
         .css('left', moveX + 'px')
         .css('top', (moveY) + 'px')
         .css('transform', 'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)');
+});
+
+const MIcon = document.querySelector('.mobile_con');
+const GNB = document.querySelector('.gnb');
+
+MIcon.addEventListener('click', function () {
+    MIcon.classList.toggle('on');
+    GNB.classList.toggle('on');
+});
+
+window.addEventListener('resize', function () {
+    GNB.classList.remove('on');
+});
+
+GNB.addEventListener('wheel', function (e) {
+    if (GNB.classList.contains('on')) {
+        e.preventDefault();
+    };
 });
