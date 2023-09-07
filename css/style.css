@@ -558,7 +558,7 @@ p {
   margin: 0 auto 0 400px;
   height: 100vh;
   width: calc(100vw - 418px);
-  background: linear-gradient(rgba(247, 248, 249, 0.15) 0%, #f7f8f9 130px);
+  background: linear-gradient(rgba(247, 248, 249, 0.15) 0%, #f7f8f9 120px);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
