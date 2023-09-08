@@ -6,8 +6,9 @@
         top: 0;
         left: 0;
         bottom: 0;
+        z-index: 1111;
         width: 80px;
-        background: linear-gradient(#434343 0%, black 100%);
+        background: $c-p;
 
         display: flex;
         flex-direction: column;
@@ -15,16 +16,17 @@
         align-items: center;
         padding: 40px 0;
 
-        .icon {
-            a {
-                display: block;
-                width: 32px;
+        transition: 0.5s;
 
-                img {
-                    width: 100%;
-                }
+        .icon {
+            width: 32px;
+
+            img {
+                width: 100%;
             }
         }
+
+
 
         .arrow {
             display: flex;
@@ -36,6 +38,19 @@
                 color: $c-w;
                 user-select: none;
                 cursor: pointer;
+            }
+        }
+
+        &.on {
+            background: $c-w;
+
+            .icon {
+                transform: rotate(45deg);
+                filter: brightness(0);
+            }
+
+            .arrow {
+                display: none;
             }
         }
 
@@ -423,19 +438,19 @@
                 display: block;
                 width: 32px;
                 height: 32px;
-                border: 3px solid $c-4;
+                border: 2px solid $c-4;
                 transition: 0.5s;
             }
 
             &.on {
                 &::before {
                     transform: translate(-7px, -7px) rotate(45deg);
-                    background: $c-main;
+                    background: $c-9;
                 }
 
                 &::after {
                     transform: translate(-16px, -16px) rotate(45deg);
-                    border: 3px solid $c-main;
+                    border: 2px solid $c-6;
                 }
             }
         }

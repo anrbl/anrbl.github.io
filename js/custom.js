@@ -3,11 +3,18 @@ const Page = gsap.utils.toArray('#main');
 const Pages = gsap.utils.toArray('.stck');
 const tops = Pages.map(Page => ScrollTrigger.create({ trigger: Page, start: "top top" }));
 
+
+const ICON = document.querySelector('.icon');
+const HDT = document.querySelector('.header_top');
+const Quick = document.querySelector('.quick');
+
 const up = document.querySelector('.arrow .up');
 const down = document.querySelector('.arrow .down');
+
 const Nav = gsap.utils.toArray('.gnb a');
 const PT = document.querySelector('.gnb .MT')
 const Nav1 = document.querySelectorAll('.gnb li');
+
 const NUM = document.querySelector('.n')
 const PG_TEXT = document.querySelector('.page_num .txt span')
 const PG_TITLE = document.querySelector('.page_num .txt .bold')
@@ -91,8 +98,6 @@ Pages.forEach((it, idx, arry) => {
     })
 });
 
-
-
 //네비게이션
 Nav.forEach((link, idx) => {
     // const TG = e.target.hash;
@@ -115,7 +120,7 @@ Nav.forEach((link, idx) => {
         e.preventDefault();
         const TG = linkST.start;
         gsap.to(window, {
-            duration: 0.5,
+            duration: 0.8,
             scrollTo: TG,
             ease: 'expo',
             overwrite: "auto",
@@ -131,31 +136,21 @@ function setActive(link, idx) {
     link.classList.add("on");
 }
 
+
 PT.addEventListener('click', e => {
     e.preventDefault();
     gsap.to(window, {
         scrollTo: -100,
-        duration: 1,
+        duration: 0.8,
     });
 });
 
+ICON.addEventListener('click', () => {
+    ICON.classList.toggle('on');
+    Quick.classList.toggle('on');
+    HDT.classList.toggle('on');
+})
 
-//움직이는 곳
-$(document).mousemove(function (e) {
-    var DocX = $('.stck').width();
-    var DocY = $('.stck').height();
-
-    var moveX = (e.pageX - DocX) / (DocX) * -moveF;
-    var moveY = (e.pageY - DocY) / (DocY) * -moveF;
-
-    var rotateY = (e.pageX / DocX * rotateF / 4) - rotateF;
-    var rotateX = -((e.pageY / DocY * rotateF / 4) - rotateF);
-
-    $('.popup')
-        .css('left', moveX + 'px')
-        .css('top', (moveY) + 'px')
-        .css('transform', 'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)');
-});
 
 const MIcon = document.querySelector('.mobile_con');
 const GNB = document.querySelector('.gnb');
@@ -174,3 +169,21 @@ GNB.addEventListener('wheel', function (e) {
         e.preventDefault();
     };
 });
+
+
+//움직이는 곳
+// $(document).mousemove(function (e) {
+//     var DocX = $('.stck').width();
+//     var DocY = $('.stck').height();
+
+//     var moveX = (e.pageX - DocX) / (DocX) * -moveF;
+//     var moveY = (e.pageY - DocY) / (DocY) * -moveF;
+
+//     var rotateY = (e.pageX / DocX * rotateF / 4) - rotateF;
+//     var rotateX = -((e.pageY / DocY * rotateF / 4) - rotateF);
+
+//     $('.popup')
+//         .css('left', moveX + 'px')
+//         .css('top', (moveY) + 'px')
+//         .css('transform', 'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)');
+// });

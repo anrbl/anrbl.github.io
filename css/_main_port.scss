@@ -75,6 +75,11 @@
 
                 .tools {
                     margin: 0 0 16px 0;
+
+                    b {
+                        padding: 0 4px;
+                        background: $c-main;
+                    }
                 }
 
                 .colors {

@@ -8,23 +8,36 @@
     <link rel="icon" href="./images/logo_color.png" type="image/x-icon">
 
     <link rel="stylesheet" href="./css/slick.css">
-    <link rel="stylesheet" href="./css/style.css?ver=2.1">
+    <link rel="stylesheet" href="./css/style.css?ver=2.5">
 
     <script src="./js/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script src="./js/slick.min.js"></script>
-    <script src="./js/custom.js?ver=1.5" defer></script>
+    <script src="./js/custom.js?ver=2.0" defer></script>
 </head>
 
 <body>
+    <div class="quick">
+        <div class="MT">Go to Line</div>
+        <ul>
+            <!-- <li><a href="#port0"><strong>00</strong></a></li> -->
+            <li><a href="#port1"><strong>01</strong> 인천세종병원</a></li>
+            <li><a href="#port2"><strong>02</strong> SOMETHING BORROWED BLOOMS</a></li>
+            <li><a href="#port3"><strong>03</strong> Breguet</a></li>
+            <li><a href="#port4"><strong>04</strong> HARLEY DAVIDSON</a></li>
+            <li><a href="#port5"><strong>05</strong> 울산 태권도 협회</a></li>
+            <li><a href="#port6"><strong>06</strong> 키친아트</a></li>
+            <li><a href="#port7">Training</a></li>
+            <li><a href="#port8">contact</a></li>
+        </ul>
+    </div>
+
     <header class="header" id="header">
         <div class="header_top">
             <div class="icon">
-                <a href="/">
-                    <img src="./images/logo.png" alt="임규리 포토폴리오">
-                </a>
+                <img src="./images/logo.png" alt="임규리 포토폴리오">
             </div>
             <div class="arrow">
                 <div class="up">
@@ -49,7 +62,6 @@
             <nav class="gnb">
                 <h2 class="blind">포트폴리오 섹션 네비게이션</h2>
                 <ul>
-                    <!-- <li><a href="#main_cover">00</a></li> -->
                     <li><a href="#port0" class="MT">00</a></li>
                     <li><a href="#port1">01</a></li>
                     <li><a href="#port2">02</a></li>
@@ -83,11 +95,14 @@
     <main class="main" id="main">
         <section class="main_cover stck" id="port0">
             <div class="inner cover">
-                <div class="popup">
+                <div class="title">
                     <h2>Box, Line,<br />...</h2>
                     <p><strong class="bold">점을 이어 선, 선을 이어 면으로.</strong>누구나 알아볼 수 있는 사이트,<br />누구나 이해할 수 있는 홈페이지를
                         만들겠습니다.
                     </p>
+                </div>
+                <div class="scd">
+                    <span>scroll down</span>
                 </div>
             </div>
         </section>
@@ -155,7 +170,7 @@
                         </div>
                         <div class="tools tag">
                             <strong>사용 툴</strong>
-                            <span>HTML, Scss, jQuery, slick slide, FullPage</span>
+                            <span>HTML, <b>Sass</b>, jQuery, slick slide, <b>FullPage</b></span>
                         </div>
                         <div class="colors tag">
                             <strong>색상</strong>
@@ -238,7 +253,7 @@
                         </div>
                         <div class="tools tag">
                             <strong>사용 툴</strong>
-                            <span>Html, Scss, jQuery, swiper slide, FullPage</span>
+                            <span>Html, <b>Sass</b>, jQuery, swiper slide, <b>FullPage</b></span>
                         </div>
                         <div class="colors tag">
                             <strong>색상</strong>
@@ -280,7 +295,7 @@
                         </div>
                         <div class="tools tag">
                             <strong>사용 툴</strong>
-                            <span>Html, Scss, jQuery, slick slide</span>
+                            <span>Html, <b>Sass</b>, jQuery, slick slide</span>
                         </div>
                         <div class="colors tag">
                             <strong>색상</strong>
@@ -321,7 +336,7 @@
                         </div>
                         <div class="tools tag">
                             <strong>사용 툴</strong>
-                            <span>Html, Scss, jQuery, slick slide</span>
+                            <span>Html, <b>Sass</b>, jQuery, slick slide</span>
                         </div>
                         <div class="colors tag">
                             <strong>색상</strong>
@@ -368,9 +383,21 @@
                         </a>
                     </li>
                     <li>
-                        <a href="http://rbflkkangcha1.dothome.co.kr" target="_blank">
+                        <a href="https://anrbl.github.io/hd_web_javascript" target="_blank">
                             <div class="desc">
                                 <div class="num">02</div>
+                                <div class="txt">
+                                    <strong>현대 엘리베이터</strong>
+                                    <p>바닐라 자바 스크립트 활용 | 클론 코딩을 통한 사이트 레이아웃에 대한 이해 실습</p>
+                                </div>
+                            </div>
+                            <span>MORE</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://rbflkkangcha1.dothome.co.kr" target="_blank">
+                            <div class="desc">
+                                <div class="num">03</div>
                                 <div class="txt">
                                     <strong>부산 청소업체, 깔끔이 청소</strong>
                                     <p>그누보드 활용 | php를 활용하여 카테고리 별로 사이트 연동한 클론 코딩 실습</p>
@@ -382,22 +409,10 @@
                     <li>
                         <a href="https://anrbl.github.io/responsive_web_outback" target="_blank">
                             <div class="desc">
-                                <div class="num">03</div>
+                                <div class="num">04</div>
                                 <div class="txt">
                                     <strong>아웃백 스테이크 하우스</strong>
                                     <p>클론 코딩을 통한 사이트 레이아웃에 대한 이해 실습</p>
-                                </div>
-                            </div>
-                            <span>MORE</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://anrbl.github.io/hd_web_javascript" target="_blank">
-                            <div class="desc">
-                                <div class="num">04</div>
-                                <div class="txt">
-                                    <strong>현대 엘리베이터</strong>
-                                    <p>자바 스크립트 활용 | 클론 코딩을 통한 사이트 레이아웃에 대한 이해 실습</p>
                                 </div>
                             </div>
                             <span>MORE</span>

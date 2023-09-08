@@ -37,6 +37,21 @@
             }
         }
 
+        .scd {
+            position: absolute;
+            bottom: 80px;
+            right: 80px;
+            z-index: 1000;
+
+            span {
+                font-size: 12px;
+                font-weight: 700;
+                color: $c-9;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+            }
+        }
+
         &::before {
             content: "";
             position: absolute;
@@ -77,6 +92,18 @@
 
         background: $c-wb;
     }
+
+    .main_cover {
+        .cover {
+            .scd {
+                position: absolute;
+                bottom: 80px;
+                right: 50%;
+                transform: translate(50%, 0);
+                z-index: 1000;
+            }
+        }
+    }
 }
 
 @media (max-width:650px) {
@@ -109,6 +136,11 @@
 
             &::before {
                 display: none;
+            }
+
+
+            .scd {
+                bottom: 32px;
             }
         }
     }
