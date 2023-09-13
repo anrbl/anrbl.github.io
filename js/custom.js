@@ -53,9 +53,9 @@ if (history.scrollRestoration) {
 Pages.forEach((it, idx, arry) => {
     const pg = ScrollTrigger.create({
         trigger: it,
-        start: () => it.offsetHeight < window.innerHeight ? "top top" : "bottom bottom",
-        pin: true,
-        pinSpacing: false,
+        // start: () => it.offsetHeight < window.innerHeight ? "top top" : "bottom bottom",
+        // pin: true,
+        // pinSpacing: false,
         onUpdate: ({ progress, direction, isActive }) => {
             NUM.innerHTML = Pagi[idx].num;
             PG_TEXT.innerHTML = Pagi[idx].text;

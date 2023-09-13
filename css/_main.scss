@@ -5,7 +5,8 @@
     margin: 0 auto 0 400px;
     height: 100vh;
     width: calc(100vw - 418px);
-    background: linear-gradient(rgba($color: $c-wb, $alpha: 0.15)0%, rgba($color: $c-wb, $alpha: 1) 120px);
+    background: $c-wb;
+    // background: linear-gradient(rgba($color: $c-wb, $alpha: 0.15)0%, rgba($color: $c-wb, $alpha: 1) 120px);
     backdrop-filter: blur(5px);
     box-shadow: -5px 0 10px rgba($color: $c-b, $alpha: 0.1);
 }
