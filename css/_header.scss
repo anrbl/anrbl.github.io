@@ -293,16 +293,16 @@
 
         .head_wrap {
             left: 60px;
-            width: 300px;
+            width: 240px;
 
             h1 {
-                left: 60px;
-                width: 300px;
+                left: 50px;
+                width: 240px;
             }
 
             .gnb {
-                left: 60px;
-                width: 300px;
+                left: 50px;
+                width: 240px;
                 padding: 0 40px;
 
                 ul {
@@ -311,7 +311,7 @@
                             &.on {
 
                                 &::before {
-                                    width: 304px;
+                                    width: 244px;
                                 }
                             }
                         }
@@ -321,8 +321,31 @@
             }
 
             .head_pagination {
-                left: 60px;
-                width: 300px;
+                left: 50px;
+                width: 240px;
+
+                .page_num {
+                    gap: 4px;
+                    align-items: center;
+
+                    .num {
+                        font-size: 40px;
+
+                        strong {
+                            font-size: 40px;
+                        }
+                    }
+
+                    .txt {
+                        span {
+                            font-size: 15px;
+                        }
+
+                        strong {
+                            font-size: 14px;
+                        }
+                    }
+                }
             }
         }
     }

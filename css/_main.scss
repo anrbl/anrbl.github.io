@@ -40,16 +40,62 @@
 
         .scd {
             position: absolute;
-            bottom: 80px;
+            bottom: 120px;
             right: 80px;
             z-index: 1000;
 
             span {
+                position: relative;
                 font-size: 12px;
                 font-weight: 700;
                 color: $c-9;
                 text-transform: uppercase;
                 letter-spacing: 3px;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 20px;
+                    right: 0;
+                    z-index: 500;
+                    transform: translate(0, -4px);
+                    width: 32px;
+                    height: 32px;
+                    clip-path: polygon(50% 85%, 100% 50%, 100% 65%, 50% 100%, 0 65%, 1% 50%);
+                    background: $c-9;
+                    opacity: 20%;
+
+                    animation: downdown 2s 1s infinite;
+                }
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 30px;
+                right: 0;
+                z-index: 500;
+                transform: translate(0, -4px);
+                width: 32px;
+                height: 32px;
+                clip-path: polygon(50% 85%, 100% 50%, 100% 65%, 50% 100%, 0 65%, 1% 50%);
+                background: $c-9;
+                opacity: 50%;
+                animation: downdown 2s 1.3s infinite;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 40px;
+                right: 0;
+                transform: translate(0, -4px);
+                width: 32px;
+                height: 32px;
+                clip-path: polygon(50% 85%, 100% 50%, 100% 65%, 50% 100%, 0 65%, 1% 50%);
+                background: $c-9;
+                opacity: 80%;
+                animation: downdown 2s 1.6s infinite;
             }
         }
 
@@ -71,15 +117,30 @@
     }
 }
 
+@keyframes downdown {
+    0% {
+        transform: translate(0, -4px);
+    }
+
+    60% {
+        transform: translate(0, 0);
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 20%;
+    }
+}
+
 //--------------------------------------------------------
 
 
 @media (max-width:1200px) {
     .stck {
         position: sticky;
-        margin: 0 auto 0 360px;
+        margin: 0 auto 0 300px;
         height: 100vh;
-        width: calc(100vw - 378px);
+        width: calc(100vw - 318px);
 
         background: linear-gradient(rgba($color: $c-wb, $alpha: 0.15)0%, rgba($color: $c-wb, $alpha: 1) 90px);
     }

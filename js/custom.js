@@ -7,6 +7,7 @@ const tops = Pages.map(Page => ScrollTrigger.create({ trigger: Page, start: "top
 const ICON = document.querySelector('.icon');
 const HDT = document.querySelector('.header_top');
 const Quick = document.querySelector('.quick');
+const ACT = document.querySelector('.quick ul li a');
 
 const up = document.querySelector('.arrow .up');
 const down = document.querySelector('.arrow .down');
@@ -18,6 +19,9 @@ const Nav1 = document.querySelectorAll('.gnb li');
 const NUM = document.querySelector('.n')
 const PG_TEXT = document.querySelector('.page_num .txt span')
 const PG_TITLE = document.querySelector('.page_num .txt .bold')
+
+const MIcon = document.querySelector('.mobile_con');
+const GNB = document.querySelector('.gnb');
 
 const Pagi = [
     { name: 'main_cover', num: '0', text: 'INTRO', page: 'BOX ─ LINE' },
@@ -79,10 +83,11 @@ Pages.forEach((it, idx, arry) => {
 
     up.addEventListener("click", (e) => {
         e.preventDefault();
-        gsap.from(window, {
-            scrollTo: "main"
+        gsap.to(window, {
+            scrollTo: "main",
+            duration: 1,
         });
-    })
+    });
     down.addEventListener("click", (e) => {
         e.preventDefault();
         const por = "#port" + idx;
@@ -137,6 +142,7 @@ function setActive(link, idx) {
 }
 
 
+
 PT.addEventListener('click', e => {
     e.preventDefault();
     gsap.to(window, {
@@ -149,11 +155,8 @@ ICON.addEventListener('click', () => {
     ICON.classList.toggle('on');
     Quick.classList.toggle('on');
     HDT.classList.toggle('on');
-})
+});
 
-
-const MIcon = document.querySelector('.mobile_con');
-const GNB = document.querySelector('.gnb');
 
 MIcon.addEventListener('click', function () {
     MIcon.classList.toggle('on');
@@ -170,20 +173,3 @@ GNB.addEventListener('wheel', function (e) {
     };
 });
 
-
-//움직이는 곳
-// $(document).mousemove(function (e) {
-//     var DocX = $('.stck').width();
-//     var DocY = $('.stck').height();
-
-//     var moveX = (e.pageX - DocX) / (DocX) * -moveF;
-//     var moveY = (e.pageY - DocY) / (DocY) * -moveF;
-
-//     var rotateY = (e.pageX / DocX * rotateF / 4) - rotateF;
-//     var rotateX = -((e.pageY / DocY * rotateF / 4) - rotateF);
-
-//     $('.popup')
-//         .css('left', moveX + 'px')
-//         .css('top', (moveY) + 'px')
-//         .css('transform', 'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)');
-// });
