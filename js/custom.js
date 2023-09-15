@@ -3,12 +3,11 @@ const Page = gsap.utils.toArray('#main');
 const Pages = gsap.utils.toArray('.stck');
 const tops = Pages.map(Page => ScrollTrigger.create({ trigger: Page, start: "top top" }));
 
-
 const ICON = document.querySelector('.icon');
 const HDT = document.querySelector('.header_top');
 const Quick = document.querySelector('.quick');
-const ACT = document.querySelector('.quick ul li a');
-
+const ACTa = gsap.utils.toArray('.quick li');
+const ACTb = document.querySelectorAll('.quick li');
 const up = document.querySelector('.arrow .up');
 const down = document.querySelector('.arrow .down');
 
@@ -53,13 +52,21 @@ if (history.scrollRestoration) {
     );
 }
 
+
+ICON.addEventListener('click', () => {
+    ICON.classList.toggle('on');
+    Quick.classList.toggle('on');
+    HDT.classList.toggle('on');
+
+});
+
 //페이지 애니메이션
 Pages.forEach((it, idx, arry) => {
     const pg = ScrollTrigger.create({
         trigger: it,
-        // start: () => it.offsetHeight < window.innerHeight ? "top top" : "bottom bottom",
-        // pin: true,
-        // pinSpacing: false,
+        start: () => it.offsetHeight < window.innerHeight ? "top top" : "bottom bottom",
+        pin: true,
+        pinSpacing: false,
         onUpdate: ({ progress, direction, isActive }) => {
             NUM.innerHTML = Pagi[idx].num;
             PG_TEXT.innerHTML = Pagi[idx].text;
@@ -130,6 +137,8 @@ Nav.forEach((link, idx) => {
             ease: 'expo',
             overwrite: "auto",
         });
+        GNB.classList.remove('on');
+        MIcon.classList.remove('on');
     });
 
 });
@@ -141,8 +150,6 @@ function setActive(link, idx) {
     link.classList.add("on");
 }
 
-
-
 PT.addEventListener('click', e => {
     e.preventDefault();
     gsap.to(window, {
@@ -150,13 +157,6 @@ PT.addEventListener('click', e => {
         duration: 0.8,
     });
 });
-
-ICON.addEventListener('click', () => {
-    ICON.classList.toggle('on');
-    Quick.classList.toggle('on');
-    HDT.classList.toggle('on');
-});
-
 
 MIcon.addEventListener('click', function () {
     MIcon.classList.toggle('on');
@@ -173,3 +173,25 @@ GNB.addEventListener('wheel', function (e) {
     };
 });
 
+
+ACTb.forEach((it, idx, arry) => {
+    it.addEventListener('click', (e) => {
+        e.preventDefault();
+        const por1 = "#port" + (idx + 1);
+        const por2 = "#port" + (idx);
+        const tg = e.target.hash;
+        console.log(por1)
+        gsap.fromTo(window, {
+            scrollTo: por1,
+            ease: 'expo',
+            duration: 0.8
+        }, {
+            scrollTo: por2,
+            ease: 'expo',
+            duration: 0.8
+        });
+        Quick.classList.remove('on')
+        ICON.classList.remove('on')
+        HDT.classList.remove('on')
+    })
+})
