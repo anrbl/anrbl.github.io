@@ -92,20 +92,19 @@ Pages.forEach((it, idx, arry) => {
         e.preventDefault();
         gsap.to(window, {
             scrollTo: "main",
-            duration: 1,
+            duration: 1.2,
         });
     });
     down.addEventListener("click", (e) => {
         e.preventDefault();
         const por = "#port" + idx;
         console.log(por)
-
         gsap.to(window, {
             scrollTo: {
                 y: por,
                 offsetY: 0
             },
-            duration: 2,
+            duration: 1.5,
         });
     })
 });
