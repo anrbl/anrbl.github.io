@@ -224,6 +224,7 @@ p {
 }
 #header .header_top .icon {
   width: 32px;
+  cursor: pointer;
 }
 #header .header_top .icon img {
   width: 100%;

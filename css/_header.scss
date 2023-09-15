@@ -20,6 +20,7 @@
 
         .icon {
             width: 32px;
+            cursor: pointer;
 
             img {
                 width: 100%;
@@ -178,14 +179,6 @@
                     padding: 6px;
                     color: $c-4;
                 }
-
-                // &.on {
-                //     display: flex;
-                //     align-items: flex-end;
-                //     gap: 8px;
-                //     opacity: 1;
-                //     visibility: visible;
-                // }
             }
         }
     }
