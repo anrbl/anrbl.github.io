@@ -11,6 +11,8 @@ const ACTb = document.querySelectorAll('.quick li');
 const up = document.querySelector('.arrow .up');
 const down = document.querySelector('.arrow .down');
 
+
+const GNB = document.querySelector('.gnb');
 const Nav = gsap.utils.toArray('.gnb a');
 const PT = document.querySelector('.gnb .MT')
 const Nav1 = document.querySelectorAll('.gnb li');
@@ -20,7 +22,6 @@ const PG_TEXT = document.querySelector('.page_num .txt span')
 const PG_TITLE = document.querySelector('.page_num .txt .bold')
 
 const MIcon = document.querySelector('.mobile_con');
-const GNB = document.querySelector('.gnb');
 
 const Pagi = [
     { name: 'main_cover', num: '0', text: 'INTRO', page: 'BOX ─ LINE' },
@@ -194,3 +195,9 @@ ACTb.forEach((it, idx, arry) => {
         HDT.classList.remove('on')
     })
 })
+
+Quick.addEventListener('wheel', function (e) {
+    if (Quick.classList.contains('on')) {
+        e.preventDefault();
+    };
+});
