@@ -1290,7 +1290,8 @@ p {
     gap: 10px;
   }
   .case ul li a .desc {
-    align-items: flex-start;
+    grid-template-columns: 40px 1fr;
+    align-items: start;
   }
   .case ul li a .desc .num {
     font-size: 24px;

@@ -730,7 +730,8 @@
                     gap: 10px;
 
                     .desc {
-                        align-items: flex-start;
+                        grid-template-columns: 40px 1fr;
+                        align-items: start;
 
                         .num {
                             font-size: 24px;
