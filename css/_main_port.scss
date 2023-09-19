@@ -309,8 +309,13 @@
                                 background: $c-m03;
                             }
 
+
+                            &.c_s {
+                                background: #007fb2;
+                            }
+
                             &.c_p {
-                                background: #d3ba9e;
+                                background: #6cb1cc;
                             }
                         }
                     }
@@ -398,12 +403,8 @@
                                 background: $c-m05;
                             }
 
-                            &.c_s {
-                                background: #8d1891;
-                            }
-
                             &.c_p {
-                                background: #b80e0e;
+                                background: #d3ba9e;
                             }
                         }
                     }
@@ -447,11 +448,11 @@
                             }
 
                             &.c_s {
-                                background: #007fb2;
+                                background: #8d1891;
                             }
 
                             &.c_p {
-                                background: #6cb1cc;
+                                background: #b80e0e;
                             }
                         }
                     }
@@ -538,6 +539,11 @@
                         font-size: 24px;
                         font-weight: 700;
                         margin: 0 0 8px 0;
+                    }
+
+                    b {
+                        font-weight: 700;
+                        color: $c-point;
                     }
                 }
 
