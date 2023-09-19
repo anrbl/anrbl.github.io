@@ -44,6 +44,11 @@
                     line-height: 22px;
                     font-weight: 300;
                     margin: 0 0 31px 0;
+
+                    strong {
+                        font-weight: 700;
+                        color: $c-point;
+                    }
                 }
 
 

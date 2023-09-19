@@ -871,6 +871,10 @@ p {
   font-weight: 300;
   margin: 0 0 31px 0;
 }
+.stck .content .case_l .port_desc p strong {
+  font-weight: 700;
+  color: #ff6969;
+}
 .stck .content .case_l .port_desc .tag {
   display: grid;
   grid-template-columns: 84px 1fr;
